@@ -227,7 +227,9 @@ const recentMatches=[['에란겔','#1','25분 36초','스쿼드','12킬','2026.1
 
 const FAVORITES_STORAGE_KEY='wwcd-gg-favorites-v1';
 let currentPlayerData=null;
-function formatFavoriteAccessDate(value){const match=String(value||'').match(/(20\\d{2})[.\\/-](\\d{1,2})[.\\/-](\\d{1,2})/);if(!match)return '기록 없음';return match[1]+'.'+match[2].padStart(2,'0')+'.'+match[3].padStart(2,'0')}\nfunction normalizeFavoriteAccessDates(){document.querySelectorAll('#favorites .favorite-entry').forEach(entry=>{const detail=entry.querySelector('.grow .muted');if(detail)detail.textContent=formatFavoriteAccessDate(detail.textContent)})}\nfunction createFavoriteEntry(data){
+function formatFavoriteAccessDate(value){const match=String(value||'').match(/(20\\d{2})[.\\/-](\\d{1,2})[.\\/-](\\d{1,2})/);if(!match)return '기록 없음';return match[1]+'.'+match[2].padStart(2,'0')+'.'+match[3].padStart(2,'0')}
+function normalizeFavoriteAccessDates(){document.querySelectorAll('#favorites .favorite-entry').forEach(entry=>{const detail=entry.querySelector('.grow .muted');if(detail)detail.textContent=formatFavoriteAccessDate(detail.textContent)})}
+function createFavoriteEntry(data){
   const entry=document.createElement('article');entry.className='favorite-entry';
   const avatar=document.createElement('div');avatar.className='avatar';avatar.textContent=data.avatar||'👤';avatar.style.backgroundColor=getProfileColor(data.name);
   const info=document.createElement('div');info.className='grow';
