@@ -145,11 +145,18 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
   #favorites>.section-title>.btn{flex:0 0 auto;white-space:nowrap;padding:9px 10px}
   .favorite-sort-tabs,.community-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
   .favorite-sort-tabs button,.community-tabs button{white-space:nowrap;padding:8px 5px}
-  .discover-heading>div{min-width:0}
+  .discover-heading{gap:8px}
+  .discover-heading>div{min-width:0;flex:1}
+  .discover-heading .muted{line-height:1.45}
   .discover-more{flex:0 0 auto}
-  .discover-card-meta{min-width:0;flex-wrap:wrap}
+  .discover-card-meta{min-width:0;gap:8px}
+  .news-card .discover-card-meta{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}
+  .news-card .news-category{min-width:0;overflow-wrap:anywhere}
   .discover-card-meta .tag,.post-popularity{white-space:nowrap}
-  .discover-card p,.discover-card h3,#community .post p{overflow-wrap:anywhere}
+  .community-card .discover-card-meta{justify-content:flex-start;gap:10px}
+  .community-card .post-popularity{flex:0 0 auto;font-size:10px}
+  .discover-card h3,.discover-card p,#community .post p{min-width:0;overflow-wrap:anywhere}
+  .discover-card h3{line-height:1.5}
   .screen.active>.section-title{gap:10px;align-items:flex-start}
   .screen.active>.section-title>div{min-width:0;flex:1}
   .screen.active>.section-title>.btn,.screen.active>.section-title>.tag{flex-shrink:0}
