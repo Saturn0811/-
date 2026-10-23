@@ -464,6 +464,6 @@ function togglePlay(button){if(replayTimer){clearInterval(replayTimer);replayTim
   current.replaceWith(next);
   window.activeSettingView=title;
 }
-updateReplaySync();loadFavoriteList();applyFavoriteAvatarColors();syncFavoriteStatsFromSnapshots();normalizeFavoriteAccessDates();saveFavoriteList();applySharedProfileAvatarColors();if(location.hash)go(decodeURIComponent(location.hash.slice(1)),false);window.addEventListener('popstate',()=>go(decodeURIComponent(location.hash.slice(1))||'search',false));</script></body></html>
+initReplayMapOverlay();updateReplaySync();loadFavoriteList();applyFavoriteAvatarColors();syncFavoriteStatsFromSnapshots();normalizeFavoriteAccessDates();saveFavoriteList();applySharedProfileAvatarColors();if(location.hash)go(decodeURIComponent(location.hash.slice(1)),false);window.addEventListener('popstate',()=>go(decodeURIComponent(location.hash.slice(1))||'search',false));</script></body></html>
 
 
