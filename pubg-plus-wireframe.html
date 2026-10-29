@@ -448,6 +448,23 @@ input[type="range"]:hover::-moz-range-thumb,input[type="range"]:focus-visible::-
 #replay .replay-layer-dock .layer-source-note,
 #replay .replay-map-overlay>span,
 #replay .replay-keyboard-hint{display:none!important}
+</style><style id="replay-icon-only-controls">
+#replay .video-status{display:none!important}
+#replay .replay-control-bar .replay-play-button,
+#replay .replay-control-bar .replay-skip-button,
+#replay .replay-control-bar #replay-settings-button,
+#replay .replay-control-bar #replay-fullscreen-button{font-size:0!important;line-height:0!important}
+#replay .replay-control-bar .replay-play-button:before{content:'▶';font-size:16px;line-height:1}
+#replay .replay-control-bar .replay-play-button[aria-pressed=true]:before{content:'Ⅱ';font-size:15px}
+#replay .replay-control-bar .replay-skip-button:before{font-size:16px;line-height:1}
+#replay .replay-control-bar .replay-skip-button[aria-label='10초 뒤로']:before{content:'↶'}
+#replay .replay-control-bar .replay-skip-button[aria-label='10초 앞으로']:before{content:'↷'}
+#replay .replay-control-bar .replay-skip-button small{display:none}
+#replay .replay-control-bar #replay-settings-button,
+#replay .replay-control-bar #replay-fullscreen-button{width:36px;min-width:36px;height:34px;padding:4px}
+#replay .replay-control-bar #replay-settings-button:before{content:'⚙';font-size:16px;line-height:1}
+#replay .replay-control-bar #replay-fullscreen-button:before{content:'⛶';font-size:17px;line-height:1}
+@media(max-width:700px){#replay .replay-control-bar #replay-settings-button,#replay .replay-control-bar #replay-fullscreen-button{width:32px;min-width:32px}}
 </style></head><body>
 <aside class="sidebar"><button class="brand" type="button" onclick="returnHome()" aria-label="아이디 검색으로 이동">WWCD.<b>GG</b></button><nav class="nav"><button class="active" data-page="search" onclick="go('search')"><span>⌕</span> 아이디 검색</button><button data-page="favorites" onclick="go('favorites')"><span>☆</span> 즐겨찾기</button><button data-page="community" onclick="go('community')"><span>♧</span> 커뮤니티</button><button data-page="settings" onclick="go('settings')"><span>▦</span> 마이페이지</button><button data-page="inquiry" onclick="go('inquiry')"><span>✉</span> 문의</button></nav><div class="sidefoot">전적 분석 · 플레이 커뮤니티</div></aside>
 <main class="main"><header class="top"><button class="mobile-back" type="button" aria-label="뒤로가기" onclick="goBack()">‹</button><div><h1 id="page-title">아이디 검색</h1><div class="header-news" aria-label="공지사항 및 게임 소식"><a href="https://pubgesports.com/en/news/11299" target="_blank" rel="noopener noreferrer"><b>공지사항</b><time datetime="2026-10-21">10.21</time><span>Virtus.pro, PGS 10 우승</span></a><a href="https://www.pubg.com/en/news/11182" target="_blank" rel="noopener noreferrer"><b>게임 소식</b><time datetime="2026-10-13">10.13</time><span>10월 상점 업데이트 · Bentley 콜라보</span></a></div></div><a class="mobile-brand" href="#search" aria-label="WWCD.GG 홈" onclick="go('search');return false">WWCD.<b>GG</b></a><button class="profile" type="button" aria-label="프로필 열기" onclick="go('settings')">◉　이성진　⌄</button></header>
